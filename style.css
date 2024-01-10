@@ -1,0 +1,132 @@
+/* font-family: 'Work Sans', sans-serif; */
+
+/* - White: hsl(0, 0%, 100%)
+- Light pink: hsl(275, 100%, 97%)
+- Grayish purple: hsl(292, 16%, 49%)
+- Dark purple: hsl(292, 42%, 14%) */
+
+:root {
+    --ff-sans: 'Poppins', sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fw-title: 700;
+
+    --fs-400: 0.9375rem;
+    --fs-600: 1.1rem;
+    --fs-700: 4rem;
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-neutral: hsl(275, 100%, 97%);
+    --clr-graypurple: hsl(292, 16%, 49%);
+    --clr-darkpurple: hsl(292, 42%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-neutral);
+    align-items: center;
+    font-family: var(--ff-sans);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.FAQ-wrapper {
+    transform: translateY(-10vw);
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 15px;
+    background-color: var(--clr-white);
+    width: 33%;
+    padding: 0 30px;
+}
+
+.FAQ-wrapper h1 {
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-700);
+    align-content: center;
+    font-weight: var(--fw-title);
+    padding: 30px 0;
+    color: var(--clr-darkpurple);
+}
+
+.FAQ-wrapper h1 img {
+    margin-top: 10px;
+}
+
+.question h2 {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    color: var(--clr-darkpurple);
+
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 30px 0;
+    align-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.question h2:hover {
+    color: #AD28EB;
+}
+
+.question .answer {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-normal);
+    color: var(--clr-graypurple);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+  
+  .question .answer.active {
+    opacity: 1;
+    max-height: 250px; 
+    padding-bottom: 30px;
+  }
+  
+
+.question .answer.active {
+    opacity: 1;
+    height: auto;
+  }
+
+.plus-icon {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .FAQ-wrapper {
+        width: 70%;
+    }
+} 
+
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
